@@ -1,7 +1,7 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Geist, Azeret_Mono as Geist_Mono } from "next/font/google"
 import "./globals.css"
-import type React from "react" // Import React
+import type React from "react"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +16,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Offline Notes App",
   description: "A simple offline-capable note-taking application",
-  themeColor: "#3b82f6",
-  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
   manifest: "/manifest.json",
   icons: {
     icon: "/web-app-manifest-192x192.png",
@@ -28,6 +26,13 @@ export const metadata: Metadata = {
     statusBarStyle: "default",
     title: "Offline Notes",
   },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: "#3b82f6",
 }
 
 export default function RootLayout({
