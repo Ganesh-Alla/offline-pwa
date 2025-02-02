@@ -1,5 +1,5 @@
 const CACHE_NAME = "offline-notes-cache-v1"
-const urlsToCache = ["/", "/index.html", "/manifest.json", "/icon-192x192.png", "/icon-512x512.png"]
+const urlsToCache = ["/", "/index.html", "/manifest.webmanifest",, "/icon-192x192.png", "/icon-512x512.png"]
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache)))

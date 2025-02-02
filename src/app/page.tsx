@@ -3,6 +3,7 @@
 import NoteForm from "@/components/NoteForm"
 import NoteList from "@/components/NoteList"
 import StatusBanner from "@/components/StatusBanner"
+import PWAInstall from "@/components/PWAinstall"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <NoteForm />
         <NoteList />
       </main>
+      <PWAInstall />
     </div>
   )
 }
